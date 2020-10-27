@@ -1,4 +1,10 @@
 package Problem3;
+/*
+    Nam Nguyen
+    October 29, 2020
+    CSS 143B
+    Quiz #1
+ */
 
 import java.util.UUID;
 
