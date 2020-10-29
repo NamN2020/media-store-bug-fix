@@ -1,12 +1,32 @@
 import Problem3.*;
 import org.junit.Test;
 
+import java.util.UUID;
+
 import static org.junit.Assert.*;
 
 public class Problem3Test {
     @Test
     public void catchTheBugInBook() {
         // quiz
+        Book f = new BookFiction("t2", "au10", "g1");
+        Book br = new BookRomance("t4", "a1");
+        String fAuthor = f.getAuthor();
+        String brAuthor = br.getAuthor();
+        String fTitle = f.getTitle();
+        String brTitle = br.getTitle();
+
+        if(fAuthor.equals(brAuthor) && fTitle.equals(brTitle) && !f.equals(br)){
+            assertTrue(true);
+        } else {
+            //fail();
+        }
+
+        //assertTrue(fAuthor.equals(brAuthor));
+        //assertTrue(fTitle.equals(brTitle));
+
+        //assertFalse(f.equals(br));
+
     }
 
     @Test
