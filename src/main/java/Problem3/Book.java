@@ -24,6 +24,7 @@ public abstract class Book implements StoreMediaOperations {
         this.title = anotherBook.title;
         this.author = anotherBook.author;
     }
+
     //  setters
     public void setTitle(String newTitle){
         title = newTitle;
@@ -59,11 +60,13 @@ public abstract class Book implements StoreMediaOperations {
         //  1. newly add tests fail while all old tests still pass
         //  2. remove the bug and use the fix below, all tests pass
 
+        /*
         return id.equals(theOtherBook.id) &&
                 author.equals(theOtherBook.author) &&
                 title.equals(theOtherBook.title);
+         */
 
         // fix is here
-        // return id.equals(theOtherBook.id);
+        return id.equals(theOtherBook.id);
     }
 }

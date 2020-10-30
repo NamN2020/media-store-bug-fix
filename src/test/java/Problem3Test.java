@@ -9,29 +9,28 @@ public class Problem3Test {
     @Test
     public void catchTheBugInBook() {
         // quiz
-        Book f = new BookFiction("t2", "au10", "g1");
-        Book br = new BookRomance("t4", "a1");
-        String fAuthor = f.getAuthor();
-        String brAuthor = br.getAuthor();
-        String fTitle = f.getTitle();
-        String brTitle = br.getTitle();
+        String fcAuthor;
+        String fcTitle;
 
-        if(fAuthor.equals(brAuthor) && fTitle.equals(brTitle) && !f.equals(br)){
-            assertTrue(true);
-        } else {
-            //fail();
-        }
-
-        //assertTrue(fAuthor.equals(brAuthor));
-        //assertTrue(fTitle.equals(brTitle));
-
-        //assertFalse(f.equals(br));
+        BookRomance f = new BookRomance("t2", "au1");
+        BookRomance fc = new BookRomance(f);
+        fc.setAuthor("au2");
+        fc.setTitle("t3");
+        assertTrue(f.equals(fc));
 
     }
 
     @Test
     public void catchTheBugInMovie() {
         // quiz
+        String mcRating;
+        String mcTitle;
+
+        MovieComedy m = new MovieComedy("PG13", "t1");
+        MovieComedy mc = new MovieComedy(m);
+        mc.setRating("PG");
+        mc.setTitle("t2");
+        assertTrue(m.equals(mc));
     }
 
     // DO NOT REMOVE OR CHANGE ANYTHING BELOW THIS!
